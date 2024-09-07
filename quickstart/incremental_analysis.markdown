@@ -41,9 +41,17 @@ or for maven
 
 **historyOutputFile**
 
-
 These point to the locations from which to read and write mutation analysis results. This can be the same location. If different locations are used
 you will need to implement some mechanism to swap the values between runs as PIT does itself does not currently provide a mechanism.
 
+In case you do not want to choose input and output files explictly, there is an additional parameter:
+
+**withHistory**
+
+When set to true, the history file is placed in the temporary-file directory designated by `java.io.tmpdir`
+
+## Warning
+
+If `withHistory` is true, the history input and output file location parameters are ignored.
 
 
